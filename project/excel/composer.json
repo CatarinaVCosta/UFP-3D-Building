@@ -1,0 +1,12 @@
+{
+    "name": "csoares/excel",
+    "require": {
+        "phpoffice/phpexcel": "^1.8"
+    },
+    "authors": [
+        {
+            "name": "Christophe Soares",
+            "email": "soareschristophe@gmail.com"
+        }
+    ]
+}

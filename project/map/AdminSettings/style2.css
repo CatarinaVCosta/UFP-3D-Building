@@ -1,0 +1,423 @@
+header{
+    /*    height: 60px;
+        background: black;*/
+}
+
+aside {
+    background: #e7e7e7;
+    width: 320px;
+    position: absolute;
+    right: 0;
+    padding-bottom: 50px;
+    height: 100%;
+    top: 0;
+}
+
+main {
+    width: calc( 100% - 320px );
+    background: white;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.btn{
+    height:60px;
+    width:auto;
+    padding:20px 15px 0 0;
+    background:#444444;
+    color:white;
+    font: 600 18px "Roboto",sans-serif;
+    cursor:pointer;
+    display:block;
+}
+
+.titulo {
+    font:400 34px "Georgia",sans-serif;
+    padding:10px 0;
+    display:block;
+    text-align:center;
+}
+
+.reservaWraper,
+.searchWraper {
+    height:60px;
+    width:100%;
+    text-align:center; 
+}
+
+.navBody{
+    width:92%;
+    margin:0 auto;
+}
+
+
+/** collpase **/
+.toggle {
+    display: none;
+    visibility: hidden;
+    transition: all 1.5s;
+}
+.tabContent {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1.0s ease-in-out;
+}
+.toggle:checked ~ .tabContent {
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 1;
+    border-top:1px solid gray;
+    transition: all 1.5s ease-in-out;
+}
+/** end **/
+
+
+.optFiltros > form.opts {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.tabContent {
+    background:white;
+}
+.tabContent .formWraper {
+    width: 94%;
+    margin:20px auto;
+}
+.tab.group {
+    border:1px solid black;
+}
+.tab.group + .tab.group {
+    border-top:0;
+}
+.tab.group .label.name {
+    cursor:pointer;
+    height: 60px;
+    background:#f8f8f8;
+    text-align:center;
+    vertical-align: middle;
+    display: block;
+    padding:20px 0 0;
+    opacity:0.7;
+    transition: all 1.0s ease-in-out;
+    text-transform: capitalize;
+}
+.toggle:checked + .label.name {
+    opacity: 1;
+    background:steelblue;
+    color:white;
+}
+.tab.group .label.name:hover {
+    opacity: 1;
+    background:steelblue;
+    color:white;
+}
+
+.tabContent .formWraper .qtd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-left:15px;
+}
+.tabContent .formWraper .qtd[type="text"] {
+    width: 40px;
+    text-align: right;
+    border:0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: inherit;
+    opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: inherit;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: inherit;
+    opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: inherit;
+    opacity: 1;
+}
+.tabContent .formWraper .qtd.name {
+    text-transform: capitalize;
+}
+.tabContent .formWraper {
+    font-size: 0;
+}
+.tabContent .formWraper .qtdWraper {
+    display: inline-block;
+}
+
+.tabContent .formWraper .qtd.btn {
+    height: 30px;
+    text-align: center;
+    padding:6px 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    color:skyblue;
+    background: transparent;
+    border:1px solid skyblue;
+}
+.tabContent .formWraper .qtd.btn.Minus {
+    height: 30px;
+    text-align: center;
+    padding:1px 11px;
+    border-radius: 30px;
+    font-size: 20px;
+    color:tomato;
+    border:1px solid tomato;
+}
+.tabContent .formWraper .qtd.btn.Plus:hover {
+    color:white;
+    background: skyblue;
+}
+.tabContent .formWraper .qtd.btn.Minus:hover {
+    color:white;
+    background: tomato;
+}
+
+
+.tabContent .formWraper .checkWraper .name {
+    font-size:15px;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+
+.tabContent .formWraper .checkWraper {
+    padding: 10px 0 0 15px;
+}
+.tabContent .formWraper .check {
+}
+
+.tabContent .formWraper .optionWraper {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.optFiltros input[type="submit"] {
+    background: steelblue;
+    height: 60px;
+    width: 100%;
+    color:white;
+    border:1px solid black;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.optFiltros input[type="submit"]:hover {
+    background: tomato;
+    color:white;
+}
+
+
+
+.wrapper{
+    max-width: 1680px;
+    width: 92%;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    overflow-y: auto;
+    align-items: flex-start;
+    margin-left: 15px;
+    margin: 1em 0 .6em 0;
+
+}
+
+table {
+
+    width:65%;
+    border-top:1px solid #e5eff8;
+    border-right:1px solid #e5eff8;
+    margin: 1em 0 .6em 0;
+    border-collapse:collapse;
+    float: left;
+    margin-left: 30px;
+}
+th{
+    font-size: 14px;
+}
+td {
+
+    font-size: 14px;
+    color:#678197;
+    border-bottom:1px solid #e5eff8;
+    border-left:1px solid #e5eff8;
+    padding:.3em 1em;
+    text-align:center;
+}
+
+r.odd td {
+    background:#f7fbff
+}
+tr.odd .column1 {
+    background:#f4f9fe;
+}
+.column1 {
+    background:#f9fcfe;
+}
+tr:hover {
+    background-color: #ccc;
+}
+.optFiltros input[type="submit"] {
+    background: steelblue;
+    height: 60px;
+    width: 100%;
+    color:white;
+    border:1px solid black;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.optFiltros input[type="button"] {
+    background: #B71C1C;
+    height: 60px;
+    width: 100%;
+    color:white;
+    border:1px solid black;
+    margin-top:20px;
+    cursor:pointer;
+}
+.optFiltros input[type="text"]{
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: #ccc;
+}
+
+
+h2 {
+    /*    margin: 1em 0 .6em 0;
+        padding: 0 0 0 20px;
+        font-weight: normal;
+        color: black;
+        font-family: 'Hammersmith One', sans-serif;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+        position: relative;
+        font-size: 30px;
+        line-height: 40px;*/
+    margin: 1.2em 0 1em 0;
+    color: #333;
+    font-weight: normal;
+    font-family: 'Orienta', sans-serif;
+    font-size: 30px;
+    counter-increment: section-2;
+    counter-reset: section-3 section-4;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.tr_disable{
+    background-color: #e3e5e8; 
+}
+.container{
+    margin-left:30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+div.container_edit_user{
+    position: relative;
+    padding-top: 2em;
+    margin-top: 70px;
+}
+
+element.style {
+    color: white;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    color: #626268;
+    text-align: left;
+}
+
+
+
+.container_current_user{    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    right:0;
+    background-color: #515158;
+}
+
+.container_current_user .panel p{
+    margin-left: 30px;
+    float: left;
+    color: white;
+}
+
+.search__input {
+    width: 100%;
+    padding: 1.315em 2em;
+    color: #fff;
+    border: 0;
+    background: #515158;
+    border-radius: 0;
+}

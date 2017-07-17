@@ -1,0 +1,381 @@
+header{
+    /*    height: 60px;
+        background: black;*/
+}
+
+aside {
+    background: #e7e7e7;
+    width: 320px;
+    position: absolute;
+    right: 0;
+    padding-bottom: 50px;
+    height: 100%;
+    top: 0;
+}
+
+main {
+    width: calc( 100% - 320px );
+    background: white;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.btn{
+    height:60px;
+    width:auto;
+    padding:20px 15px 0 0;
+    background:#444444;
+    color:white;
+    font: 600 18px "Roboto",sans-serif;
+    cursor:pointer;
+    display:block;
+}
+
+.titulo {
+    font:400 34px "Georgia",sans-serif;
+    padding:10px 0;
+    display:block;
+    text-align:center;
+}
+
+.reservaWraper,
+.searchWraper {
+    height:60px;
+    width:100%;
+    text-align:center; 
+}
+
+.navBody{
+    width:92%;
+    margin:0 auto;
+}
+
+
+/** collpase **/
+.toggle {
+    display: none;
+    visibility: hidden;
+    transition: all 1.5s;
+}
+.tabContent {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1.0s ease-in-out;
+}
+.toggle:checked ~ .tabContent {
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 1;
+    border-top:1px solid gray;
+    transition: all 1.5s ease-in-out;
+}
+/** end **/
+
+
+.optFiltros > form.opts {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.tabContent {
+    background:white;
+}
+.tabContent .formWraper {
+    width: 94%;
+    margin:20px auto;
+}
+.tab.group {
+    border:1px solid black;
+}
+.tab.group + .tab.group {
+    border-top:0;
+}
+.tab.group .label.name {
+    cursor:pointer;
+    height: 60px;
+    background:#f8f8f8;
+    text-align:center;
+    vertical-align: middle;
+    display: block;
+    padding:20px 0 0;
+    opacity:0.7;
+    transition: all 1.0s ease-in-out;
+    text-transform: capitalize;
+}
+.toggle:checked + .label.name {
+    opacity: 1;
+    background:steelblue;
+    color:white;
+}
+.tab.group .label.name:hover {
+    opacity: 1;
+    background:steelblue;
+    color:white;
+}
+
+.tabContent .formWraper .qtd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    margin-left:15px;
+}
+.tabContent .formWraper .qtd[type="text"] {
+    width: 40px;
+    text-align: right;
+    border:0;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: inherit;
+    opacity: 1;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: inherit;
+    opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: inherit;
+    opacity: 1;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: inherit;
+    opacity: 1;
+}
+.tabContent .formWraper .qtd.name {
+    text-transform: capitalize;
+}
+.tabContent .formWraper {
+    font-size: 0;
+}
+.tabContent .formWraper .qtdWraper {
+    display: inline-block;
+}
+
+.tabContent .formWraper .qtd.btn {
+    height: 30px;
+    text-align: center;
+    padding:6px 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    color:skyblue;
+    background: transparent;
+    border:1px solid skyblue;
+}
+.tabContent .formWraper .qtd.btn.Minus {
+    height: 30px;
+    text-align: center;
+    padding:1px 11px;
+    border-radius: 30px;
+    font-size: 20px;
+    color:tomato;
+    border:1px solid tomato;
+}
+.tabContent .formWraper .qtd.btn.Plus:hover {
+    color:white;
+    background: skyblue;
+}
+.tabContent .formWraper .qtd.btn.Minus:hover {
+    color:white;
+    background: tomato;
+}
+
+
+.tabContent .formWraper .checkWraper .name {
+    font-size:15px;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+
+.tabContent .formWraper .checkWraper {
+    padding: 10px 0 0 15px;
+}
+.tabContent .formWraper .check {
+}
+
+.tabContent .formWraper .optionWraper {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.optFiltros input[type="submit"] {
+    background: steelblue;
+    height: 60px;
+    width: 100%;
+    color:white;
+    border:1px solid black;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+.optFiltros input[type="submit"]:hover {
+    background: tomato;
+    color:white;
+}
+
+.TabContent{
+    width: 250px;
+    /* padding: 20px; */
+    display: inline-block;
+    background-color: #e2e3e7;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px;
+    margin: 5px 10px;
+    margin-bottom: 40px;
+}
+
+.TabContent.reservado{
+    box-shadow: 0 0 15px green;
+    border:1px solid green;
+}
+
+
+.TabContent .bottom{
+    padding: 15px;
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    color: black;
+}
+
+.TabContent .bottom .bottom-dentro{
+    width: 100%;
+    font-size: 15px;
+}
+
+TabContent .bottom .bottom-dentro .imageContent{
+    text-align: center;
+}
+
+.TabContent .top{
+    width: 100%;
+    position: relative;
+}
+
+.TabContent .top .image{
+    width: 100%;
+    height:100%;
+}
+
+.TabContent .top .dentro{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.TabContent .top .dentro .dentro-dentro{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    /* height: 60px; */
+    /* position: relative; */
+}
+
+.TabContent .top .dentro .dentro-dentro h2{
+    margin: 4px 15px 0 0;
+}
+
+.TabContent .image img{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+}
+
+.wraper{
+    max-width: 1680px;
+    width: 92%;
+    margin: 0 auto;
+    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    margin-top: 50px;
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+table {
+
+    width:60%;
+
+    border-top:1px solid #e5eff8;
+    border-right:1px solid #e5eff8;
+    margin:1em auto;
+    border-collapse:collapse;
+}
+th{
+    font-size: 14px;
+}
+td {
+
+    font-size: 14px;
+    color:#678197;
+    border-bottom:1px solid #e5eff8;
+    border-left:1px solid #e5eff8;
+    padding:.3em 1em;
+    text-align:center;
+}
+
+r.odd td {
+    background:#f7fbff
+}
+tr.odd .column1 {
+    background:#f4f9fe;
+}
+.column1 {
+    background:#f9fcfe;
+}
+tr:hover {
+    background-color: #ccc;
+}
+
+.search__input{
+    width: 100%;
+    padding: 1.315em 2em;
+    color: #fff;
+    border: 0;
+    background: #515158;
+    border-radius: 0;
+}
+
+.alert {
+ 
+    left: 20%;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn2 {
+    margin-left: 15px;
+    color: white;
+    float: right;
+    font-size: 18px;
+    line-height: 20px;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
